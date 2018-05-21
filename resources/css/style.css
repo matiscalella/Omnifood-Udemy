@@ -1,0 +1,241 @@
+/*
+    Orange color: #E67E22
+*/
+
+/*-----------------------------------------------*/
+/* --------------- Basic Setup ------------------*/
+/*-----------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*------------------------------------------------------*/
+/*--------------- Initial configuration ----------------*/
+/*------------------------------------------------------*/
+html {
+    background-color: #FFF;
+    color: #555;
+    font-family: 'Lato', 'Árial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+
+/*------------------------------------------------------*/
+/*-------------------- Reusable Code---------------------*/
+/*------------------------------------------------------*/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0; /* Este padding genera ESPACIO EN BLANCO para separar los elementos*/
+}
+
+.box { /* Columnas de Section 1 Features */
+    padding: 1%; /* separacion entre las columnas */
+}
+
+
+/*------------------------------------------------------*/
+/* ---------------- Headings / Titles ----------------- */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase; /* transforma el texto a mayusculas */
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 240%; /* establece que el tamaño del texto sera un 240% en relacion al tamaño establecido en {html} (20px)*/
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after { /* Esta pseudoclase crea un elemento despues del h2 (una barra naranja) */
+    display: block; /* especifica el tipo de elemento a crear */
+    height: 2px; /* altura de la barra */
+    background-color: #E67E22; /* color de fondo de la barra*/
+    content: ""; /* contenido VACIO*/
+    width: 100px; /* ancho */
+    margin: 0 auto; /* centrar elemento */
+    margin-top: 30px; /* Separacion del elemento con el elemento que tiene encima */
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/*------------------------------------------------------*/
+/* -------------------- Paragraphs -------------------- */
+
+.long-copy { /* Texto principal de la Section 1 Features */
+    line-height: 145%; /* separacion entre líneas (altura entre oraciones) */
+    width: 70%; /* este parrafo reduce su longitud en un 30% para evitar que sea largo*/
+    margin-left: 15%; /* al establecer un 15% de espacio de margen a ambos lados, queda centrado el elemento ya que el espacio que ocupa es 70%*/
+    margin-right: 15%;
+}
+
+.box p { /* Parrafos de las columnas de la Section 1 Features */
+    font-size: 90%; /* tamaño del texto de los parrafos */
+    line-height: 145%; /* separacion entre lineas (espaciado vertical entre oraciones)*/
+}
+
+/*------------------------------------------------------*/
+/* --------------------- Icons ------------------------ */
+
+.icon-big { /* Section 1 Features */
+    font-size: 350%; /* establezo el tamaño de los icons */
+    display: block; /* fuerzo un linea-break */
+    color: #E67E22;
+    margin-bottom: 10px;
+    /*text-align: center; esta propiedad centraria los ICONS*/ 
+}
+
+/*------------------------------------------------------*/
+/* --------------------- Buttons ---------------------- */
+
+.btn:link,
+.btn:visited {
+    display: inline-block; /* transforma ambos botones en un elemento en línea con propiedades de bloque (padding y margin)*/
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none; /* elimina el subrayado y el color azul caracteristico de los hipervinculos. */
+    border-radius: 200px; /* redondea los bordes del boton */
+    transition: background-color 0.2s, border 0.2s, color 0.2s; /* Propiedad que realizar una transicion en 0.2 segundos de las propiedades                                                                         asignadas (color de fondo, borde y color del texto).*/
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #E67E22;
+    border: 1px solid #E67E22;
+    color: #FFF;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #E67E22;
+    color: #E67E22;
+}
+
+.btn:hover, /* hover es el estado del link (botón) cuando fue visitado */
+.btn:active { /* active es el estado del boton cuando le hago click */
+    background-color: #CF6D17; /* el boton oscurece su color a #CF6D17 cuando se posiciona el mouse encima */
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #CF6D17; /* el borde del boton tambien cambia su color */
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #CF6D17;
+    color: #FFF; /* en este boton el color del texto tambien debe cambiar para verse blanco */
+}
+
+
+/* ---------------------------------------------------- */
+/* ----------------------- Header --------------------- */
+/* ---------------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg');
+    background-size: cover; /* El fondo cubre la totalidad del elemento que lo contiene */
+    background-position: center; /* Mantiene siempre el fondo centrado */
+    height: 100vh; /* Establece la altura del contenedor {header} para que sea del 100% del viewport*/
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px; /* Establece un tamaño para la imagen del logo */
+    width: auto;
+    float: left; /* Establece la posicion flotante del logo arriba a la izquierda */
+    margin-top: 20px;
+}
+
+
+/* ---------------------------------------------------- */
+/* ----------------- Navigation Bar (UL) ---------------*/
+/* ---------------------------------------------------- */
+
+.main-nav {
+    float: right; /* Establece la posicion flotante de los botones en la barra de navegacion a la derecha */
+    list-style: none; /* Elimina los puntos de las listas desordenadas */
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block; /* Establece los list items como elementos en linea con propiedad de elemento en bloque para agregar un margin */
+    margin-left: 40px; /* Establece un margen izquierdo a cada uno los de list items para separarlos. */
+}
+
+/* ---------------------------------------------------- */
+/* ------------------ NavBar Buttons ------------------ */
+
+.main-nav li a:link, 
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent; /* subrayado TRANSPARENTE que no es visible */
+    transition: border-bottom 0.2s; /* establece la transicion de border-bottom invisible a color en 0.2 segundos */
+}
+
+.main-nav li a:hover, 
+.main-nav li a:active {
+    border-bottom: 2px solid #E67E22; /* este borde existe de antemano sobre los links en el estado "link" y "visited" */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
