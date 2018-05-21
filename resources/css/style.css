@@ -214,8 +214,50 @@ header {
     border-bottom: 2px solid #E67E22; /* este borde existe de antemano sobre los links en el estado "link" y "visited" */
 }
 
+/*--------------------------------------------------------------*/
+/* -------------------- Section 1 Features -------------------- */
 
+.section-features .long-copy {
+    margin-bottom: 30px; /* separacion entre el parrafo de la section 1 y las columnas debajo */
+}
 
+/* ----------------------------------------------------------- */
+/* --------------------- Section 2 Meals --------------------- */
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none; /*IMPORTANTE para quitar los bullet points de la lista*/
+    width: 100%; /* establece que el ancho de la UL sea del 100% del ancho de pagina disponible */
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo { /* clase asignada a los figure en la UL*/
+    width: 100%; /* este ancho es un 100% del ancho que tiene asignado por medio de su elemento padre que es ".meals showcase LI" */
+    margin: 0;
+    overflow: hidden; /* oculta la parte de la imagen que sobresale del contendor (propiedad transform: scale mas abajo)*/
+    background-color: #000; /* esta propiedad se combina con la opacity de la imagen para crear un efecto */
+}
+
+.meal-photo img {
+    opacity: 0.7; /* propiedad que crea una pelicula opaca sobre la imagen (tiene que combinarse con el background-color del padre */
+    width: 100%; /* establece un ancho del 100% del contenedor padre (100% de "figure .meal-photo") */
+    height: auto;
+    transform: scale(1.15); /* propiedad que escala la imagen a un 115% de su tamaño original, se debe ajustar con "OVERFLOW: hidden" */
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1; /* la opacidad vuelve a ser 1 cuando coloco el cursor sobre la imagen */
+    transform: scale(1.03); /* regresa la imagen a su tamaño original para crear el efecto cuando posiciono el cursor encima */
+}
 
 
 
