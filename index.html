@@ -9,7 +9,7 @@
         <title>Omnifood</title>
     </head>
     <body>
-<!-- ------------------------------------------------- Section 0 Header + Hero ------------------------------------------------ -->
+<!-- -------------------------------------------------- Section 0 Header + Hero ------------------------------------------------ -->
         <header> 
             <nav> <!---------------- Barra de navegación ---------------->
                 <div class="row">
@@ -28,7 +28,7 @@
                 <a class="btn btn-ghost"href="#">Show me more</a>
             </div>        
         </header>
-<!-- ------------------------------------------------- Section 1 Features ------------------------------------------------ -->
+<!-- ---------------------------------------------------- Section 1 Features --------------------------------------------------- -->
         <section class="section-features">
             <div class="row"> <!-- Encabezado principal con texto -->
                 <h2>Get food fast &mdash; not fast food.</h2> <!-- El codigo "&mdash;" es un carácter especial de HTML -->
@@ -70,7 +70,7 @@
         </section>
 <!-- ------------------------------------------------- Section 2 Favorite Meals ------------------------------------------------ -->
         <section class="section-meals"> <!-- No utilizo un ROW porque quiero el width sea del 100% de la pagina -->
-            <ul class="meals-showcase"> <!-- Primera fila -->
+            <ul class="meals-showcase clearfix"> <!-- Primera fila -->
                 <li>
                     <figure class="meal-photo">
                         <img src="resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
@@ -92,7 +92,7 @@
                     </figure>
                 </li>
             </ul>
-            <ul class="meals-showcase"> <!-- Segunda fila -->
+            <ul class="meals-showcase clearfix"> <!-- Segunda fila -->
                 <li>
                     <figure class="meal-photo">
                         <img src="resources/img/5.jpg" alt="Paleo beef steak with vegetables">
@@ -114,6 +114,33 @@
                     </figure>
                 </li>
             </ul>
-        </section>        
+        </section>  
+<!-- ----------------------------------------------------- Section 3 Steps ----------------------------------------------------- -->
+        <section class="section-steps">
+            <div class="row"> <!-- Una fila para centrar el titulo -->
+                <h2>How it works &mdash; Simple as 1, 2, 3</h2>                
+            </div>
+            <div class="row"> <!-- Esta fila contiene 2 columnas, por eso la clase de las columnas debajo es "col span-1-of-2" -->
+                <div class="col span-1-of-2 steps-box">
+                    <img class="app-screen" src="resources/img/app-iPhone.png" alt="Omnifood app on iPhone">
+                </div>
+                <div class="col span-1-of-2 steps-box"> <!-- Columna que contiene los PASOS -->
+                    <div class="works-step">
+                        <div>1</div> <!-- se coloca dentro de un div para luego crear circulos -->
+                        <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                    </div>
+                    <div class="works-step">
+                        <div>2</div>
+                        <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                    </div>
+                    <div class="works-step">
+                        <div>3</div>
+                        <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+                    </div>
+                    <a href="#" class="btn-app"><img src="resources/img/download-app-store.svg" alt="App Store Button"></a> <!-- download btns-->
+                    <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="GooglePlay Store Button"></a>
+                </div>
+            </div>
+        </section>   
     </body>
 </html>

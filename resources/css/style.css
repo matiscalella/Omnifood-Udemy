@@ -11,10 +11,6 @@
     box-sizing: border-box;
 }
 
-
-/*------------------------------------------------------*/
-/*--------------- Initial configuration ----------------*/
-/*------------------------------------------------------*/
 html {
     background-color: #FFF;
     color: #555;
@@ -23,6 +19,15 @@ html {
     font-weight: 300;
     text-rendering: optimizeLegibility;
 }
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+} /* establece un clear para los floats */
 
 
 /*------------------------------------------------------*/
@@ -247,7 +252,7 @@ header {
 }
 
 .meal-photo img {
-    opacity: 0.7; /* propiedad que crea una pelicula opaca sobre la imagen (tiene que combinarse con el background-color del padre */
+    opacity: 0.7; /* establece opacidad del 70% para que quede a trasluz el fondo negro de ".meal-photo" */
     width: 100%; /* establece un ancho del 100% del contenedor padre (100% de "figure .meal-photo") */
     height: auto;
     transform: scale(1.15); /* propiedad que escala la imagen a un 115% de su tamaño original, se debe ajustar con "OVERFLOW: hidden" */
@@ -255,21 +260,59 @@ header {
 }
 
 .meal-photo img:hover {
-    opacity: 1; /* la opacidad vuelve a ser 1 cuando coloco el cursor sobre la imagen */
+    opacity: 1; /* la opacidad vuelve a ser 1 cuando coloco el cursor sobre la imagen, por lo tanto veo la imagen tapando el fondo negro */
     transform: scale(1.03); /* regresa la imagen a su tamaño original para crear el efecto cuando posiciono el cursor encima */
 }
 
+/* ----------------------------------------------------------- */
+/* --------------------- Section 3 Steps --------------------- */
 
+.section-steps {
+    background-color: #F4F4F4; /* color de fondo para crear un separador sutil de la sección */
+}
 
+.steps-box:first-child { /* selecciono el primer hijo que surge de la clase steps-box (es decir, la caja que contiene la imagen)*/
+    text-align: right; /* alineo la imagen a la derecha del contenedor*/
+    padding-right: 3%; /* establece que el espacio entre la imagen y el borde derecho es de un 3% del tamaño total del contenedor */
+    margin-top: 30px;
+}
 
+.steps-box:last-child { /* selecciona el ultimo hijo que contiene la clase steps-box (es decir la caja que contiene los 3 pasos)*/
+    padding-left: 3%; /* establece un espacio del 3% del total del contenedor a la izquierda */
+    margin-top: 70px;
+}
 
+.app-screen {
+    width: 40%; /* tamaño de la imagen */
+}
 
+.works-step {
+    margin-bottom: 50px; /* separa cada uno de los contenedores de los pasos */
+}
 
+.works-step:last-of-type { /* selecciona el ultimo elemento en tener la clase .works-step */
+    margin-bottom: 80px;
+}
 
+.works-step div { /* el div que contiene los numeros de los pasos */
+    color: #E67E22;
+    border: 2px solid #E67E22;
+    display: inline-block; /* establece que el elemento no fuerce un line-break y podemos posicion el texto a su lado */
+    border-radius: 50%; /* crea un borde circular */
+    height: 55px; /* establece altura de 50px y al ser un circulo, el width tambien debe ser 50px */
+    width: 55px;
+    text-align: center; /* centra el número */
+    padding: 5px;
+    float: left; /* establece que el texto se posicione a la derecha del número */
+    font-size: 150%;
+    margin-right: 25px; /* separa el texto a su derecha 25px */
+}
 
-
-
-
+.btn-app img { /* selecciona las imagenes (de los botones) para descargar la app */
+    height: 50px; /* establece la misma altura a ambas imagenes */
+    width: auto;
+    margin-right: 10px; /* separa los botones */
+}
 
 
 
