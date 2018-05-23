@@ -114,6 +114,36 @@ h3 {
     /*text-align: center; esta propiedad centraria los ICONS*/ 
 }
 
+.icon-small { /* clase asignada a los icon de la section 4 cities */
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #E67E22;
+    font-size: 120%; /* tamaño de los icons */
+    margin-right: 10px;
+    line-height: 120%; /* alinear icons y texto */
+    vertical-align: middle; /* alinear icons y texto */
+    margin-top: -5px;/* el margin negativo sube el elemento 2 pixeles por encima */
+}
+
+/*------------------------------------------------------*/
+/* ---------------------- Links ----------------------- */
+
+a:link,
+a:visited {
+    color: #E67E22;
+    text-decoration: none;
+    border-bottom: 1px solid #E67E22;
+    padding-bottom:1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
 /*------------------------------------------------------*/
 /* --------------------- Buttons ---------------------- */
 
@@ -167,6 +197,7 @@ header {
     background-size: cover; /* El fondo cubre la totalidad del elemento que lo contiene */
     background-position: center; /* Mantiene siempre el fondo centrado */
     height: 100vh; /* Establece la altura del contenedor {header} para que sea del 100% del viewport*/
+    background-attachment: fixed;  /* Efecto: el fondo queda pegado y no se mueve con el scroll */
 }
 
 .hero-text-box {
@@ -308,18 +339,102 @@ header {
     margin-right: 25px; /* separa el texto a su derecha 25px */
 }
 
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
 .btn-app img { /* selecciona las imagenes (de los botones) para descargar la app */
     height: 50px; /* establece la misma altura a ambas imagenes */
     width: auto;
     margin-right: 10px; /* separa los botones */
 }
 
+/* --------------- Section 4 Cities Version Mía -------------- */
+/* ------------------------------------------------------------------------- 
 
+.section-cities {
+    height: 100vh;
+}
 
+.cities-showcase {
+    list-style: none;
+    width: 100%;
+}
 
+.cities-showcase li {
+    display: block;
+    width: 25%;
+    float: left;
+}
 
+.cities-showcase li figure {
+    width: 100%;
+    margin: 0;
+}
 
+.cities-showcase li figure img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
 
+.cities-showcase li figure p {
+    text-align: center;
+} */
+/* ----------------------------------------------------------- */
+/* -------------------- Section 4 Cities --------------------- */
+
+.box img { /* selecciono las imagenes dentro de los elementos con clase "box" */
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature { /* div que contiene icons y texto */
+    margin-bottom: 5px;
+}
+
+/* ----------------------------------------------------------- */
+/* ----------------- Section 5 Testimonials ------------------ */
+
+.section-testimonials { /* Agrego fondo con lineargradient para agregarle una capa oscura */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #FFF; /* Color de texto */
+    background-attachment: fixed; /* Efecto: el fondo queda pegado y no se mueve con el scroll */
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%; /* Separacion entre lineas */
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before { /* crea un elemento antes del elemento blockquote */
+    content: "\201C"; /* glyph code para las comillas dobles */
+    font-size: 500%;
+    display: block; /* ocupa todo el width disponible */
+    position: absolute; /* lo posiciono en forma absoluta y le asigno a su elemento padre (blockquote) la posicion relativa */
+    top: -5px;
+    left: -5px;
+
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px; 
+    vertical-align: middle; /* centro verticalmente la imagen al centro para que coincida con el texto */
+}
 
 
 
