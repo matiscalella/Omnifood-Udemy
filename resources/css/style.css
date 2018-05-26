@@ -5,6 +5,7 @@
 /*-----------------------------------------------*/
 /* --------------- Basic Setup ------------------*/
 /*-----------------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +34,7 @@ html {
 /*------------------------------------------------------*/
 /*-------------------- Reusable Code---------------------*/
 /*------------------------------------------------------*/
+
 .row {
     max-width: 1140px;
     margin: 0 auto;
@@ -49,6 +51,7 @@ section {
 
 /*------------------------------------------------------*/
 /* ---------------- Headings / Titles ----------------- */
+
 h1,
 h2,
 h3 {
@@ -148,7 +151,8 @@ a:active {
 /* --------------------- Buttons ---------------------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block; /* transforma ambos botones en un elemento en línea con propiedades de bloque (padding y margin)*/
     padding: 10px 30px;
     font-weight: 300;
@@ -158,7 +162,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #E67E22;
     border: 1px solid #E67E22;
     color: #FFF;
@@ -172,7 +177,9 @@ a:active {
 }
 
 .btn:hover, /* hover es el estado del link (botón) cuando fue visitado */
-.btn:active { /* active es el estado del boton cuando le hago click */
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active { /* active es el estado del boton cuando le hago click */
     background-color: #CF6D17; /* el boton oscurece su color a #CF6D17 cuando se posiciona el mouse encima */
 }
 
@@ -435,6 +442,102 @@ cite img {
     margin-right: 10px; 
     vertical-align: middle; /* centro verticalmente la imagen al centro para que coincida con el texto */
 }
+
+/* ----------------------------------------------------------- */
+/* ----------------- Section 6 Sign up plans ----------------- */
+
+.section-plans {
+    background-color: #F4F4F4;
+}
+
+.plan-box {
+    background-color: #FFF;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #efefef; /* X Y BLUR COLOR*/
+}
+
+.plan-box div { /* seleciono el div que contiene las 3 partes de cada columna */
+    padding: 15px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.plan-box div:last-child { /* selecciona el ultimo elemento hijo del contenedor, en este caso es el div que contiene los botones */
+    text-align: center;
+    border: none;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #E67E22;
+}
+
+.plan-price span { /* selecciono el texto dentro del titulo que dice "/ month" y/o "/ meal" */
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/* ----------------------------------------------------------- */
+/* ----------------- Section 7 Contact Form ------------------ */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text], /* selecciona unicamente los input con type="text" y type="email"*/
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {  /* selecciona todos los elementos y quita el focus que añade chrome a los campos del formulario */
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
