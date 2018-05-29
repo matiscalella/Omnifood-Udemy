@@ -9,6 +9,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -140,6 +141,7 @@ a:visited {
     text-decoration: none;
     border-bottom: 1px solid #E67E22;
     padding-bottom:1px;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -160,6 +162,7 @@ input[type=submit] {
     font-weight: 300;
     text-decoration: none; /* elimina el subrayado y el color azul caracteristico de los hipervinculos. */
     border-radius: 200px; /* redondea los bordes del boton */
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s; /* Propiedad que realizar una transicion en 0.2 segundos de las propiedades                                                                         asignadas (color de fondo, borde y color del texto).*/
 }
 
@@ -202,6 +205,7 @@ input[type=submit]:active { /* active es el estado del boton cuando le hago clic
 /* ---------------------------------------------------- */
 
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('img/hero.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg');
     background-size: cover; /* El fondo cubre la totalidad del elemento que lo contiene */
     background-position: center; /* Mantiene siempre el fondo centrado */
@@ -214,6 +218,7 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -251,6 +256,7 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent; /* subrayado TRANSPARENTE que no es visible */
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s; /* establece la transicion de border-bottom invisible a color en 0.2 segundos */
 }
 
@@ -295,12 +301,17 @@ header {
     opacity: 0.7; /* establece opacidad del 70% para que quede a trasluz el fondo negro de ".meal-photo" */
     width: 100%; /* establece un ancho del 100% del contenedor padre (100% de "figure .meal-photo") */
     height: auto;
+    -webkit-transform: scale(1.15);
     transform: scale(1.15); /* propiedad que escala la imagen a un 115% de su tamaño original, se debe ajustar con "OVERFLOW: hidden" */
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover {
     opacity: 1; /* la opacidad vuelve a ser 1 cuando coloco el cursor sobre la imagen, por lo tanto veo la imagen tapando el fondo negro */
+    -webkit-transform: scale(1.03);
     transform: scale(1.03); /* regresa la imagen a su tamaño original para crear el efecto cuando posiciono el cursor encima */
 }
 
@@ -408,6 +419,7 @@ header {
 /* ----------------- Section 5 Testimonials ------------------ */
 
 .section-testimonials { /* Agrego fondo con lineargradient para agregarle una capa oscura */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
     background-size: cover;
     color: #FFF; /* Color de texto */
@@ -457,6 +469,7 @@ cite img {
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
+    -webkit-box-shadow: 0 2px 2px #efefef;
     box-shadow: 0 2px 2px #efefef; /* X Y BLUR COLOR*/
 }
 
@@ -567,6 +580,7 @@ footer {
     text-decoration: none;
     border: 0;
     color: #888;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -584,6 +598,7 @@ footer {
 .ion-social-twitter,
 .ion-social-googleplus,
 .ion-social-instagram {
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
