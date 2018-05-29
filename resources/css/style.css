@@ -12,6 +12,7 @@
     box-sizing: border-box;
 }
 
+body,
 html {
     background-color: #FFF;
     color: #555;
@@ -19,6 +20,7 @@ html {
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 .clearfix {zoom: 1}
