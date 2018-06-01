@@ -16,6 +16,7 @@
             <nav> <!---------------- Barra de navegación ---------------->
                 <div class="row">
                     <img class="logo" src="resources/img/logo-white.png" alt="Omnifood white logo."> <!-- Imagen de logo -->
+                    <img class="logo-black" src="resources/img/logo.png" alt="Omnifood black logo."> <!-- Imagen de logo negra (sticky) -->
                     <ul class="main-nav"> <!----------- Lista desordenada para crear la barra de navegación ----------->
                         <li><a href="#">Food delivery</a></li>
                         <li><a href="#">How it works</a></li>
@@ -31,7 +32,7 @@
             </div>        
         </header>
 <!-- ---------------------------------------------------- Section 1 Features --------------------------------------------------- -->
-        <section class="section-features">
+        <section class="section-features js--section-features"> <!-- js--section-features para agregar sticky nav -->
             <div class="row"> <!-- Encabezado principal con texto -->
                 <h2>Get food fast &mdash; not fast food.</h2> <!-- El codigo "&mdash;" es un carácter especial de HTML -->
                 <p class="long-copy">
@@ -471,10 +472,15 @@
                    Copyright &copy; 2018 by Omnifood. All rights reserved.
                </p>
            </div>
-       </footer>           
+       </footer>  
+           <!------------------------------- Agrego script de jQuery ------------------------------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Scripts para compatibilidad en versiones anteriores de navegadores -->
+        <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="resources/js/script.js"></script>         
     </body>
-    <!-- Scripts para compatibilidad en versiones anteriores de navegadores -->
-    <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+    
 </html>
