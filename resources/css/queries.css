@@ -59,13 +59,47 @@
         width: 100%;
         margin: 0 0 4% 0;
     }
-    .main-nav { display: none; }
+    
+    .main-nav { display: none; } /* el display es none y con jQuery lo modifico para que al hacer click despliegue el menu */
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+    
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 25px;
+    }
+    
+    .main-nav li { /* apilo los links del menú al volverlos elementos en bloque */
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    
+    .sticky .mobile-nav-icon i { color: #555; }
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    
+    .sticky .main-nav { margin-top: 10px; }
+
+    .sticky .main-nav li a:link, 
+    .sticky .main-nav li a:visited { padding: 16px 0; }
+
+    
     h1 { font-size: 180%; }
     h2 { font-size: 150%; }
+    
     .long-copy { 
         width: 100%;
         margin-left: 0%;
     }
+    
     .app-screen { width: 40%; }
     .steps-box:first-child { text-align: center; }
     

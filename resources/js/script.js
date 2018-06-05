@@ -94,4 +94,20 @@ $(document).ready(function() {
         offset: '50%'
     });
     
+/*---------------------- Mobile NavBar ----------------------*/
+    $('.js--nav-icon').click(function() {
+        let nav = $('.js--main-nav'); /*declaro la variable que almacena el main-nav que está oculto */
+        let icon = $('.js--nav-icon i') /* declaro una variable que contiene al icon */
+        nav.slideToggle(200); /* la funcion slideToggle recibe un parametro en milisegundos para la animacion */
+        
+        if (icon.hasClass('ion-navicon-round')) {
+            icon.addClass('ion-close-round');
+            icon.removeClass('ion-navicon-round');
+        } else {
+            icon.addClass('ion-navicon-round');
+            icon.removeClass('ion-close-round');
+        }  
+        
+    })
+    
 });
